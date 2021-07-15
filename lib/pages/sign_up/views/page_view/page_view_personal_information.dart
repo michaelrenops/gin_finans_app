@@ -94,7 +94,7 @@ class _GoalForActivationState extends State<GoalForActivation> {
                 },
               );
             }).toList(),
-            onChanged: (value) {},
+            onChanged: _signUpInherited.onChangedGoalForActivation,
           ),
         ],
       ),
