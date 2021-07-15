@@ -40,3 +40,45 @@ class PageViewPersonalInformation extends StatelessWidget {
     );
   }
 }
+
+class GoalForActivation extends StatefulWidget {
+  const GoalForActivation({Key? key}) : super(key: key);
+
+  @override
+  _GoalForActivationState createState() => _GoalForActivationState();
+}
+
+class _GoalForActivationState extends State<GoalForActivation> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class MonthlyIncome extends StatefulWidget {
+  const MonthlyIncome({Key? key}) : super(key: key);
+
+  @override
+  _MonthlyIncomeState createState() => _MonthlyIncomeState();
+}
+
+class _MonthlyIncomeState extends State<MonthlyIncome> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class MonthlyExpenses extends StatefulWidget {
+  const MonthlyExpenses({Key? key}) : super(key: key);
+
+  @override
+  _MonthlyExpensesState createState() => _MonthlyExpensesState();
+}
+
+class _MonthlyExpensesState extends State<MonthlyExpenses> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
