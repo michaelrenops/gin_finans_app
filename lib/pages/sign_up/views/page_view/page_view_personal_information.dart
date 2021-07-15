@@ -55,11 +55,13 @@ class GoalForActivation extends StatefulWidget {
 }
 
 class _GoalForActivationState extends State<GoalForActivation> {
-  String _value = '- Choose Option -';
   List<String> _items = ['- Choose Option -', 'Goal 1', 'Goal 2', 'Goal 3', 'Goal 4', 'Goal 5'];
 
   @override
   Widget build(BuildContext context) {
+    SignUpInherited _signUpInherited = SignUpInherited.of(context);
+    String _value = _signUpInherited.goalForActivation;
+
     return Container(
       padding: EdgeInsets.fromLTRB(20.0, 16.0, 20.0, 2.0),
       child: Column(
