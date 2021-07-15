@@ -84,7 +84,9 @@ class PasswordInput extends StatelessWidget {
 }
 
 class PasswordComplexityChecker extends StatelessWidget {
-  const PasswordComplexityChecker({Key? key}) : super(key: key);
+  PasswordComplexityChecker({Key? key}) : super(key: key);
+
+  int strength = 0;
 
   @override
   Widget build(BuildContext context) {
