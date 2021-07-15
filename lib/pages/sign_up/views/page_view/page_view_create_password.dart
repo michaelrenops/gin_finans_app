@@ -52,9 +52,13 @@ class PasswordInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignUpInherited _signUpInherited = SignUpInherited.of(context);
+    String _initialValue = _signUpInherited.password;
+
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
       child: TextFormField(
+        initialValue: _initialValue,
         obscureText: true,
         textInputAction: TextInputAction.done,
         decoration: InputDecoration(
