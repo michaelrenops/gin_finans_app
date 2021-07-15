@@ -12,22 +12,22 @@ class HeaderProgressNumber extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        pageNumber(1),
-        pageNumber(2),
-        pageNumber(3),
-        pageNumber(4)
+        pageNumber(_currentPage, 1),
+        pageNumber(_currentPage, 2),
+        pageNumber(_currentPage, 3),
+        pageNumber(_currentPage, 4)
       ],
     );
   }
 
-  Widget pageNumber(int number) {
+  Widget pageNumber(int currentPage, int number) {
     return AnimatedContainer(
       child: Padding(
         padding: EdgeInsets.all(12.0),
         child: Text(
           number.toString(),
           style: TextStyle(
-            color: Colors.white,
+            color: currentPage >= number ? Colors.white : Colors.black,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -35,7 +35,7 @@ class HeaderProgressNumber extends StatelessWidget {
       duration: Duration(milliseconds: 500),
       curve: Curves.linear,
       decoration: BoxDecoration(
-        color: Colors.blue,
+        color: currentPage >= number ? Colors.blue : Colors.grey.shade200,
         shape: BoxShape.circle
       ),
     );
