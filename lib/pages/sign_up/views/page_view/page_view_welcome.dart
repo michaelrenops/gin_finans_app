@@ -74,9 +74,13 @@ class EmailInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignUpInherited _signUpInherited = SignUpInherited.of(context);
+    String _initialValue = _signUpInherited.email;
+
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
       child: TextFormField(
+        initialValue: _initialValue,
         keyboardType: TextInputType.emailAddress,
         textInputAction: TextInputAction.done,
         decoration: InputDecoration(
