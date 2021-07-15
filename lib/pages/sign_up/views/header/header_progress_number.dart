@@ -5,6 +5,9 @@ class HeaderProgressNumber extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignUpInherited _signUpInherited = SignUpInherited.of(context);
+    int _currentPage = _signUpInherited.currentPage;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
