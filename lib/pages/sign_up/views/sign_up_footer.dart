@@ -16,6 +16,24 @@ class SignUpFooter extends StatelessWidget {
     String _date = _signUpInherited.dateController.text;
     String _time = _signUpInherited.timeController.text;
 
+    Color backgroundColor() {
+      if (_currentPage == 0 && _validEmail) {
+        return Colors.blue;
+      }
+      else if (_currentPage == 1 && _validPassword) {
+        return Colors.blue;
+      }
+      else if (_currentPage == 2 && _goalForActivation != '- Choose Option -' && _monthlyIncome != '- Choose Option -' && _monthlyExpenses != '- Choose Option -') {
+        return Colors.blue;
+      }
+      else if (_currentPage == 3 && _date != '' && _time != '') {
+        return Colors.blue;
+      }
+      else {
+        return Colors.blue.shade200;
+      }
+    }
+
     return Container(
       width: double.infinity,
       padding: EdgeInsets.all(20.0),
