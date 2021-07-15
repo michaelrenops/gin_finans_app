@@ -212,7 +212,7 @@ class _MonthlyExpensesState extends State<MonthlyExpenses> {
                 },
               );
             }).toList(),
-            onChanged: (value) {},
+            onChanged: _signUpInherited.onChangedMonthlyExpenses,
           ),
         ],
       ),
