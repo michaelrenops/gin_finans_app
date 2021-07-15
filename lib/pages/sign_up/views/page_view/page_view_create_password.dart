@@ -93,6 +93,20 @@ class PasswordComplexityChecker extends StatelessWidget {
     SignUpInherited _signUpInherited = SignUpInherited.of(context);
     String _password = _signUpInherited.password;
 
+    if (_password.length >= 1 && _password.length <= 2) {
+      strength = 1;
+    } else if (_password.length >= 3 && _password.length <= 4) {
+      strength = 2;
+    } else if (_password.length >= 5 && _password.length <= 6) {
+      strength = 3;
+    } else if (_password.length >= 7 && _password.length <= 8) {
+      strength = 4;
+    } else if (_password.length >= 9) {
+      strength = 5;
+    } else {
+      strength = 0;
+    }
+
     return Row(
       children: <Widget>[
         Text('Complexity : '),
