@@ -10,9 +10,14 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  PageController _pageController = PageController();
+  int _currentPage = 0;
+
   @override
   Widget build(BuildContext context) {
     return SignUpInherited(
+      pageController: _pageController,
+      currentPage: _currentPage,
       child: Scaffold(
         body: SignUpBody()
       )
