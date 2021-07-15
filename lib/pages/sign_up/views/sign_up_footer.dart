@@ -49,7 +49,7 @@ class SignUpFooter extends StatelessWidget {
           ),
         ),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+          backgroundColor: MaterialStateProperty.all<Color>(backgroundColor()),
           foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
           overlayColor: MaterialStateProperty.all<Color>(Theme.of(context).primaryColorDark),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
