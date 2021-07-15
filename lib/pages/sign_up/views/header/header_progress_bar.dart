@@ -19,7 +19,9 @@ class HeaderProgressBar extends StatelessWidget {
           ),
         ),
         AnimatedContainer(
-          width: (MediaQuery.of(context).size.width - 12.0) * 0.3,
+          width: _currentPage == 1 ? (MediaQuery.of(context).size.width - 12.0) * 0.3 :
+          _currentPage == 2 ? (MediaQuery.of(context).size.width - 12.0) * 0.6 :
+          _currentPage == 3 ? (MediaQuery.of(context).size.width - 12.0) * 1.0 : 0.0,
           height: 10.0,
           decoration: BoxDecoration(
             color: Colors.blue,
