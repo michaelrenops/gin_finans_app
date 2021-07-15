@@ -106,3 +106,61 @@ class AnimatedIcon extends AnimatedWidget {
     );
   }
 }
+
+class DateInput extends StatelessWidget {
+  const DateInput({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
+      child: TextFormField(
+        readOnly: true,
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          focusedBorder: InputBorder.none,
+          enabledBorder: InputBorder.none,
+          errorBorder: InputBorder.none,
+          icon: Icon(
+            Icons.calendar_today
+          ),
+          hintText: 'Date',
+        ),
+        onTap: () {},
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(6.0)
+      ),
+    );
+  }
+}
+
+class TimeInput extends StatelessWidget {
+  const TimeInput({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
+      child: TextFormField(
+        readOnly: true,
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          focusedBorder: InputBorder.none,
+          enabledBorder: InputBorder.none,
+          errorBorder: InputBorder.none,
+          icon: Icon(
+            Icons.access_time
+          ),
+          hintText: 'Time',
+        ),
+        onTap: () {}
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(6.0)
+      ),
+    );
+  }
+}
