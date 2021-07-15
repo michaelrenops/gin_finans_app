@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gin_finans_app/pages/inherited/sign_up_inherited.dart';
+import 'package:gin_finans_app/pages/sign_up/inherited/sign_up_inherited.dart';
 import 'package:gin_finans_app/pages/sign_up/views/sign_up_body.dart';
 
 class SignUpPage extends StatefulWidget {
