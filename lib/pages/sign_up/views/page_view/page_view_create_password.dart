@@ -112,7 +112,6 @@ class PasswordComplexityChecker extends StatelessWidget {
     return Row(
       children: <Widget>[
         Text('Complexity : '),
-        Text('-'),
         strength == 1 ? _complexity('Very Weak', Colors.red) :
         strength == 2 ? _complexity('Weak', Colors.red) :
         strength == 3 ? _complexity('Medium', Colors.amber) :
