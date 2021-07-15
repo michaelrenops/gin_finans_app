@@ -73,6 +73,7 @@ class PasswordInput extends StatelessWidget {
             onTap: () {},
           )
         ),
+        onChanged: _signUpInherited.onChangedPassword,
       ),
       decoration: BoxDecoration(
           color: Colors.white,
