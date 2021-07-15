@@ -5,6 +5,18 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: <Widget>[
+        Center(
+          child: Text(
+            'Welcome',
+            style: TextStyle(
+              fontSize: 32.0,
+              fontWeight: FontWeight.bold
+            ),
+          )
+        )
+      ],
+    );
   }
 }
