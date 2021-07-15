@@ -117,23 +117,23 @@ class PasswordValidityChecker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SignUpInherited _signUpInherited = SignUpInherited.of(context);
-    String _pasword = _signUpInherited.password;
+    String _password = _signUpInherited.password;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
-        _content('a', 'Lowercase'),
-        _content('A', 'Uppercase'),
-        _content('123', 'Number'),
-        _content('9+', 'Characters')
+        _content(_lowercase.hasMatch(_password) == true ? true : false, 'a', 'Lowercase'),
+        _content(_uppercase.hasMatch(_password) == true ? true : false, 'A', 'Uppercase'),
+        _content(_number.hasMatch(_password) == true ? true : false, '123', 'Number'),
+        _content(_password.length >= 9 ? true : false, '9+', 'Characters')
       ],
     );
   }
 
-  Widget _content(String title, String subTitle) {
+  Widget _content(bool valid, String title, String subTitle) {
     return Column(
       children: <Widget>[
-        Text(
+        valid ? _checkmark() : Text(
           title,
           style: TextStyle(
             fontSize: 26.0
