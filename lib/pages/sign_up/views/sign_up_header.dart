@@ -14,7 +14,8 @@ class SignUpHeader extends StatelessWidget {
           Stack(
             alignment: AlignmentDirectional.center,
             children: <Widget>[
-
+              HeaderProgressBar(),
+              HeaderProgressNumber(),
             ],
           ),
           SizedBox(height: 20.0),
