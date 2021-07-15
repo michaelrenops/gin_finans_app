@@ -53,6 +53,10 @@ class _PageViewScheduleVideoCallState extends State<PageViewScheduleVideoCall> w
             _title(),
             SizedBox(height: 20.0),
             _subTitle(),
+            SizedBox(height: 30.0),
+            DateInput(),
+            SizedBox(height: 20.0),
+            TimeInput()
           ],
         )
       ),
