@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gin_finans_app/pages/sign_up/views/header/header.dart';
 
 class SignUpHeader extends StatelessWidget {
   const SignUpHeader({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class SignUpHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-
+          HeaderBack()
         ],
       ),
     );
