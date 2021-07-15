@@ -15,6 +15,12 @@ class PageViewPersonalInformation extends StatelessWidget {
             _title(),
             SizedBox(height: 20.0),
             _subTitle(),
+            SizedBox(height: 30.0),
+            GoalForActivation(),
+            SizedBox(height: 20.0),
+            MonthlyIncome(),
+            SizedBox(height: 20.0),
+            MonthlyExpenses()
           ],
         )
       ),
