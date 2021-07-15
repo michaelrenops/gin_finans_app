@@ -106,3 +106,53 @@ class PasswordComplexityChecker extends StatelessWidget {
     );
   }
 }
+
+class PasswordValidityChecker extends StatelessWidget {
+  PasswordValidityChecker({Key? key}) : super(key: key);
+
+  final RegExp _lowercase = RegExp(r'[a-z]');
+  final RegExp _uppercase = RegExp(r'[A-Z]');
+  final RegExp _number = RegExp(r'\d');
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: <Widget>[
+        _content('a', 'Lowercase'),
+        _content('A', 'Uppercase'),
+        _content('123', 'Number'),
+        _content('9+', 'Characters')
+      ],
+    );
+  }
+
+  Widget _content(String title, String subTitle) {
+    return Column(
+      children: <Widget>[
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 26.0
+          ),
+        ),
+        SizedBox(height: 12.0),
+        Text(subTitle)
+      ],
+    );
+  }
+
+  Widget _checkmark() {
+    return Container(
+      padding: EdgeInsets.all(4.0),
+      child: Icon(
+        Icons.check,
+        color: Colors.white,
+      ),
+      decoration: BoxDecoration(
+          color: Colors.green,
+          shape: BoxShape.circle
+      ),
+    );
+  }
+}
