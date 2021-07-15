@@ -130,7 +130,7 @@ class DateInput extends StatelessWidget {
           ),
           hintText: 'Date',
         ),
-        onTap: () {},
+        onTap: _signUpInherited.onDateTap,
       ),
       decoration: BoxDecoration(
         color: Colors.white,
