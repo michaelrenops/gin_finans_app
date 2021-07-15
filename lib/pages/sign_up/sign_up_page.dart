@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gin_finans_app/pages/home/home_page.dart';
 import 'package:gin_finans_app/pages/sign_up/inherited/sign_up_inherited.dart';
 import 'package:gin_finans_app/pages/sign_up/views/sign_up_body.dart';
 
@@ -41,6 +42,9 @@ class _SignUpPageState extends State<SignUpPage> {
       }
       else if (_currentPage == 2 && _goalForActivation != '- Choose Option -' && _monthlyIncome != '- Choose Option -' && _monthlyExpenses != '- Choose Option -') {
         _next();
+      }
+      else if (_currentPage == 3 && _dateController.text == '' && _timeController.text == '') {
+        Navigator.of(context).pushAndRemoveUntil(HomePage.route(), (route) => false);
       }
     }
   }
