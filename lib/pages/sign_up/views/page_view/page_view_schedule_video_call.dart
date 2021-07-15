@@ -163,7 +163,7 @@ class TimeInput extends StatelessWidget {
           ),
           hintText: 'Time',
         ),
-        onTap: () {}
+        onTap: _signUpInherited.onTimeTap
       ),
       decoration: BoxDecoration(
         color: Colors.white,
