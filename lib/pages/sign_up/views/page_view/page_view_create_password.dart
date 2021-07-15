@@ -19,6 +19,8 @@ class PageViewCreatePassword extends StatelessWidget {
             Form(
               child: PasswordInput(),
             ),
+            SizedBox(height: 20.0),
+            PasswordComplexity(),
           ],
         )
       ),
@@ -71,6 +73,35 @@ class PasswordInput extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(6.0)
+      ),
+    );
+  }
+}
+
+class PasswordComplexity extends StatelessWidget {
+  const PasswordComplexity({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Text('Complexity : '),
+        Text('-'),
+        _complexity('Very Weak', Colors.red),
+        _complexity('Weak', Colors.red),
+        _complexity('Medium', Colors.amber),
+        _complexity('Strong', Colors.green),
+        _complexity('Very Strong', Colors.green)
+      ]
+    );
+  }
+
+  Widget _complexity(String text, Color color) {
+    return Text(
+      text,
+      style: TextStyle(
+        color: color,
+        fontWeight: FontWeight.bold
       ),
     );
   }
