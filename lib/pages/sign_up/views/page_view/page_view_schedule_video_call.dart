@@ -10,6 +10,17 @@ class PageViewScheduleVideoCall extends StatefulWidget {
 class _PageViewScheduleVideoCallState extends State<PageViewScheduleVideoCall> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+
+          ],
+        )
+      ),
+    );
   }
 }
