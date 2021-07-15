@@ -145,9 +145,13 @@ class TimeInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignUpInherited _signUpInherited = SignUpInherited.of(context);
+    TextEditingController _controller = _signUpInherited.timeController;
+
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
       child: TextFormField(
+        controller: _controller,
         readOnly: true,
         decoration: InputDecoration(
           border: InputBorder.none,
