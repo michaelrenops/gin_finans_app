@@ -153,7 +153,7 @@ class _MonthlyIncomeState extends State<MonthlyIncome> {
                 },
               );
             }).toList(),
-            onChanged: (value) {},
+            onChanged: _signUpInherited.onChangedMonthlyIncome,
           ),
         ],
       ),
