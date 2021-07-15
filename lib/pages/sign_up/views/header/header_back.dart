@@ -5,6 +5,9 @@ class HeaderBack extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignUpInherited _signUpInherited = SignUpInherited.of(context);
+    int _currentPage = _signUpInherited.currentPage;
+
     return GestureDetector(
       child: Container(
         child: Row(
@@ -12,12 +15,14 @@ class HeaderBack extends StatelessWidget {
             Icon(
               Icons.arrow_back_ios,
               size: 20.0,
+              color: _currentPage != 0 ? Colors.black : Colors.transparent,
             ),
             SizedBox(width: 12.0),
             Text(
               'Back',
               style: TextStyle(
-                fontSize: 20.0
+                fontSize: 20.0,
+                color: _currentPage != 0 ? Colors.black : Colors.transparent,
               ),
             )
           ],
@@ -26,7 +31,7 @@ class HeaderBack extends StatelessWidget {
           color: Colors.transparent
         ),
       ),
-      onTap: () {}
+      onTap: _signUpInherited.previousPage
     );
   }
 }
