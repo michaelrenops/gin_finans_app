@@ -15,6 +15,10 @@ class PageViewWelcome extends StatelessWidget {
             _title(),
             SizedBox(height: 20.0),
             _subTitle(),
+            SizedBox(height: 30.0),
+            Form(
+              child: EmailInput(),
+            )
           ],
         )
       ),
@@ -60,6 +64,35 @@ class PageViewWelcome extends StatelessWidget {
       'Welcome to The Bank of The Future.\nManage and track your accounts on the go.',
       style: TextStyle(
         fontSize: 16.0
+      ),
+    );
+  }
+}
+
+class EmailInput extends StatelessWidget {
+  const EmailInput({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
+      child: TextFormField(
+        keyboardType: TextInputType.emailAddress,
+        textInputAction: TextInputAction.done,
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          focusedBorder: InputBorder.none,
+          enabledBorder: InputBorder.none,
+          errorBorder: InputBorder.none,
+          icon: Icon(
+            Icons.mail_outline
+          ),
+          hintText: 'Email',
+        ),
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(6.0)
       ),
     );
   }
