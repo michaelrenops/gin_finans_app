@@ -11,6 +11,13 @@ class SignUpHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          Stack(
+            alignment: AlignmentDirectional.center,
+            children: <Widget>[
+
+            ],
+          ),
+          SizedBox(height: 20.0),
           HeaderBack()
         ],
       ),
