@@ -7,7 +7,28 @@ class PageViewScheduleVideoCall extends StatefulWidget {
   _PageViewScheduleVideoCallState createState() => _PageViewScheduleVideoCallState();
 }
 
-class _PageViewScheduleVideoCallState extends State<PageViewScheduleVideoCall> {
+class _PageViewScheduleVideoCallState extends State<PageViewScheduleVideoCall> with SingleTickerProviderStateMixin {
+  late Animation<double> animation;
+  late AnimationController controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller = AnimationController(duration: const Duration(milliseconds: 750), vsync: this);
+
+    animation = CurvedAnimation(parent: controller, curve: Curves.easeIn)
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          controller.reverse();
+        } else if (status == AnimationStatus.dismissed) {
+          controller.forward();
+        }
+      });
+
+    controller.forward();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
