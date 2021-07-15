@@ -114,11 +114,13 @@ class MonthlyIncome extends StatefulWidget {
 }
 
 class _MonthlyIncomeState extends State<MonthlyIncome> {
-  String _value = '- Choose Option -';
   List<String> _items = ['- Choose Option -', 'Less than 1.000.000', 'Between 1.000.001 and 5.000.000', 'Between 5.000.001 and 10.000.000', 'Between 10.000.001 and 20.000.000', 'More than 20.000.001'];
 
   @override
   Widget build(BuildContext context) {
+    SignUpInherited _signUpInherited = SignUpInherited.of(context);
+    String _value = _signUpInherited.monthlyIncome;
+
     return Container(
       padding: EdgeInsets.fromLTRB(20.0, 16.0, 20.0, 2.0),
       child: Column(
