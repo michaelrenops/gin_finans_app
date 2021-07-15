@@ -58,9 +58,7 @@ class SignUpFooter extends StatelessWidget {
             )
           )
         ),
-        onPressed: () {
-
-        },
+        onPressed: SignUpInherited.of(context).nextPage,
       ),
     );
   }
