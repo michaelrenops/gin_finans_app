@@ -5,6 +5,9 @@ class HeaderProgressBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignUpInherited _signUpInherited = SignUpInherited.of(context);
+    int _currentPage = _signUpInherited.currentPage;
+
     return Stack(
       children: <Widget>[
         Container(
