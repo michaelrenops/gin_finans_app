@@ -21,6 +21,8 @@ class PageViewCreatePassword extends StatelessWidget {
             ),
             SizedBox(height: 20.0),
             PasswordComplexityChecker(),
+            SizedBox(height: 60.0),
+            PasswordValidityChecker()
           ],
         )
       ),
