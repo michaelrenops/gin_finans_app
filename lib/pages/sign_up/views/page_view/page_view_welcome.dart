@@ -93,6 +93,7 @@ class EmailInput extends StatelessWidget {
           ),
           hintText: 'Email',
         ),
+        onChanged: _signUpInherited.onChangedEmail,
       ),
       decoration: BoxDecoration(
         color: Colors.white,
