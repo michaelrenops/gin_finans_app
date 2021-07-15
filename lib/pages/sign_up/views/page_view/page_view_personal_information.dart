@@ -49,9 +49,52 @@ class GoalForActivation extends StatefulWidget {
 }
 
 class _GoalForActivationState extends State<GoalForActivation> {
+  String _value = '- Choose Option -';
+  List<String> _items = ['- Choose Option -', 'Goal 1', 'Goal 2', 'Goal 3', 'Goal 4', 'Goal 5'];
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: EdgeInsets.fromLTRB(20.0, 16.0, 20.0, 2.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Goal for activation',
+            style: TextStyle(
+              fontSize: 14.0,
+              color: Colors.grey
+            ),
+          ),
+          DropdownButton<String>(
+            value: _value,
+            hint: Text('- Choose Option -'),
+            icon: Icon(Icons.keyboard_arrow_down),
+            isExpanded: true,
+            elevation: 1,
+            underline: Container(),
+            items: _items.map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+                onTap: () {
+                  if (value != '- Choose Option -') {
+                    setState(() {
+                      _value = value;
+                    });
+                  }
+                },
+              );
+            }).toList(),
+            onChanged: (value) {},
+          ),
+        ],
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10.0)
+      )
+    );
   }
 }
 
@@ -63,9 +106,52 @@ class MonthlyIncome extends StatefulWidget {
 }
 
 class _MonthlyIncomeState extends State<MonthlyIncome> {
+  String _value = '- Choose Option -';
+  List<String> _items = ['- Choose Option -', 'Less than 1.000.000', 'Between 1.000.001 and 5.000.000', 'Between 5.000.001 and 10.000.000', 'Between 10.000.001 and 20.000.000', 'More than 20.000.001'];
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: EdgeInsets.fromLTRB(20.0, 16.0, 20.0, 2.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Monthly Income',
+            style: TextStyle(
+              fontSize: 14.0,
+              color: Colors.grey
+            ),
+          ),
+          DropdownButton<String>(
+            value: _value,
+            hint: Text('- Choose Option -'),
+            icon: Icon(Icons.keyboard_arrow_down),
+            isExpanded: true,
+            elevation: 1,
+            underline: Container(),
+            items: _items.map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+                onTap: () {
+                  if (value != '- Choose Option -') {
+                    setState(() {
+                      _value = value;
+                    });
+                  }
+                },
+              );
+            }).toList(),
+            onChanged: (value) {},
+          ),
+        ],
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10.0)
+      )
+    );
   }
 }
 
@@ -77,8 +163,51 @@ class MonthlyExpenses extends StatefulWidget {
 }
 
 class _MonthlyExpensesState extends State<MonthlyExpenses> {
+  String _value = '- Choose Option -';
+  List<String> _items = ['- Choose Option -', 'Less than 1.000.000', 'Between 1.000.001 and 5.000.000', 'Between 5.000.001 and 10.000.000', 'Between 10.000.001 and 20.000.000', 'More than 20.000.001'];
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: EdgeInsets.fromLTRB(20.0, 16.0, 20.0, 2.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Monthly Expenses',
+            style: TextStyle(
+              fontSize: 14.0,
+              color: Colors.grey
+            ),
+          ),
+          DropdownButton<String>(
+            value: _value,
+            hint: Text('- Choose Option -'),
+            icon: Icon(Icons.keyboard_arrow_down),
+            isExpanded: true,
+            elevation: 1,
+            underline: Container(),
+            items: _items.map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+                onTap: () {
+                  if (value != '- Choose Option -') {
+                    setState(() {
+                      _value = value;
+                    });
+                  }
+                },
+              );
+            }).toList(),
+            onChanged: (value) {},
+          ),
+        ],
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10.0)
+      )
+    );
   }
 }
