@@ -88,6 +88,9 @@ class PasswordComplexityChecker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignUpInherited _signUpInherited = SignUpInherited.of(context);
+    String _password = _signUpInherited.password;
+
     return Row(
       children: <Widget>[
         Text('Complexity : '),
