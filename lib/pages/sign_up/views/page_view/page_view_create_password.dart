@@ -20,7 +20,7 @@ class PageViewCreatePassword extends StatelessWidget {
               child: PasswordInput(),
             ),
             SizedBox(height: 20.0),
-            PasswordComplexity(),
+            PasswordComplexityChecker(),
           ],
         )
       ),
@@ -78,8 +78,8 @@ class PasswordInput extends StatelessWidget {
   }
 }
 
-class PasswordComplexity extends StatelessWidget {
-  const PasswordComplexity({Key? key}) : super(key: key);
+class PasswordComplexityChecker extends StatelessWidget {
+  const PasswordComplexityChecker({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
