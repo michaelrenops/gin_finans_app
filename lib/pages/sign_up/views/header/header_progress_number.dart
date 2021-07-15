@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'header.dart';
 
 class HeaderProgressNumber extends StatelessWidget {
   const HeaderProgressNumber({Key? key}) : super(key: key);
