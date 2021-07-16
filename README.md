@@ -2,7 +2,6 @@
 Welcome to GIN Finans App. This app is made with Dart, Flutter. This app is made only with material and cupertino. Inherited widget is used for the state management.
 <br />
 <br />
-<br />
 ## What's Inside
 **Sign Up Page**
 1. Multiple sign up page (welcome, create password, personal information, and video call schedule).
@@ -16,4 +15,4 @@ Welcome to GIN Finans App. This app is made with Dart, Flutter. This app is made
 9. Date input and time input.
 
 **Home**
-Just a simple home page with centered welcome text to indicate that the sign up is success. 
+1. Just a simple home page with centered welcome text to indicate that the sign up is success. 
